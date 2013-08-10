@@ -1,4 +1,4 @@
-<?php namespace Validation;
+<?php namespace Arch\Validation;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Collection;
@@ -13,12 +13,12 @@ class ValidationServiceProvider extends ServiceProvider {
 
     public function boot()
     {
-        $app['validator']->extend('datetime', function($attribute, $value, $parameters)
+        $this->app['validator']->extend('datetime', function($attribute, $value, $parameters)
         {
             return $value instanceOf DateTime;
         });
 
-        $app['validator']->extend('collection', function($attribute, $value, $parameters)
+        $this->app['validator']->extend('collection', function($attribute, $value, $parameters)
         {
             return $value instanceOf Collection;
         });
