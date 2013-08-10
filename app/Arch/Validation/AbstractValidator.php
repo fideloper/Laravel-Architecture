@@ -62,7 +62,7 @@ abstract class AbstractValidator implements ValidableInterface {
      */
     public function valid()
     {
-        $validator = $this->validator->make($this->data, $this->rules);
+        $validator = $this->validator->make($this->entity->toArray(), $this->rules);
 
         if( $validator->fails() )
         {

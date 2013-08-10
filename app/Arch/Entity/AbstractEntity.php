@@ -1,8 +1,10 @@
 <?php namespace Arch\Entity;
 
 use Arch\Error\InvalidAttributeException;
+use Illuminate\Support\Contracts\ArrayableInterface;
+use Illuminate\Support\Contracts\JsonableInterface;
 
-abstract class AbstractEntity {
+abstract class AbstractEntity implements ArrayableInterface, JsonableInterface {
 
     /**
      * Allowed attributes in Entity
@@ -73,6 +75,27 @@ abstract class AbstractEntity {
         }
 
         throw new InvalidAttributeException('Invalid attribute retrieved')
+    }
+
+    /**
+     * Get the instance as an array.
+     *
+     * @return array
+     */
+    public function toArray()
+    {
+        return $this->data;
+    }
+
+    /**
+     * Convert the object to its JSON representation.
+     *
+     * @param  int  $options
+     * @return string
+     */
+    public function toJson($options = 0)
+    {
+        return json_encode($this->data, $options);
     }
 
 }
