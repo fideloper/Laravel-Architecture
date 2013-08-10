@@ -10,7 +10,7 @@ class Author extends AbstractEntity {
         'name',
         'password',
         'created',
-        'updated'
+        'updated',
     );
 
 }
