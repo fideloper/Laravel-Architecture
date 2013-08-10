@@ -1,4 +1,4 @@
-<?php namespace Validation;
+<?php namespace Arch\Validation;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Collection;
