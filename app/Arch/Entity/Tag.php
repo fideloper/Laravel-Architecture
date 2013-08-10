@@ -8,7 +8,8 @@ class Tag extends AbstractEntity {
      */
     protected $attributes = array(
         'name',
-        'short_name'
+        'short_name',
+        'articles',
     );
 
 }

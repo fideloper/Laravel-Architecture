@@ -1,4 +1,4 @@
-<?php namespace Arch\Entity\Article;
+<?php namespace Arch\Entity\Author;
 
 use Arch\Validation\AbstractValidator;
 
@@ -10,12 +10,10 @@ class Validator extends AbstractValidator {
      * @var array;
      */
     protected $rules = array(
-        'title' => 'required',
-        'short_title' => 'required',
-        'content' => 'required',
-        'tags' => 'collection',
+        'name' => 'required',
+        'password' => 'required',
         'created' => 'required|datetime',
-        'updated'  => 'required|datetime',
+        'updated' => 'required|datetime'
     );
 
 }
