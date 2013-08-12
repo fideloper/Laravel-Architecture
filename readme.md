@@ -26,6 +26,7 @@ Experimenting with code Architecture in Laravel
 3. Business domain code depends on `Illuminate\Support` and `Illuminate\Validation` in the core business logic.
 4. Eloquent factory has interface with `create`, but that method is only used internally! in `EloquentEntityFactory`. Unless you count `EloquentEntityFactory` as the "user", which it isn't - it implements the `FactoryInterface` instead of composing an implementat of `FactoryInterface`.
     * Entity Factories un-used - instead, `EloquentEntityFactory` attempts to handle all conversion of model to entity. This feels hella wrong, as per SOLID. I should use specific implementations instead (At least this makes more sense!)
+5. Factories need to handle relationships - collections of sub-entities.
 
 Overall, having issues in either NOT using Laravel *at all* for business logic (except for Interface implementations), versus going "all in" with Laravel (accepting Laravel libraries as core dependencies), or even finding a happy medium.
 
