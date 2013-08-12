@@ -13,7 +13,8 @@ class Validator extends AbstractValidator {
         'name' => 'required',
         'password' => 'required',
         'created' => 'required|datetime',
-        'updated' => 'required|datetime'
+        'updated' => 'required|datetime',
+        'deleted' => 'datetime'
     );
 
 }

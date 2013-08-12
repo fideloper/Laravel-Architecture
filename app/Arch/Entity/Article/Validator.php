@@ -16,6 +16,7 @@ class Validator extends AbstractValidator {
         'tags' => 'collection',
         'created' => 'required|datetime',
         'updated'  => 'required|datetime',
+        'deleted' => 'datetime',
     );
 
 }
