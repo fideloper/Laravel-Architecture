@@ -29,7 +29,7 @@ abstract class AbstractEntityFactory implements FactoryInterface {
         {
             if( $this->isDate($attribute) )
             {
-                $entity->$attribute = $this->date($value);
+                $entity->$dateAttr = $this->date($value);
             } else {
                 $entity->$attribute = $value;
             }
@@ -46,7 +46,7 @@ abstract class AbstractEntityFactory implements FactoryInterface {
      */
     protected function isDate($attribute)
     {
-        if( $attribute === 'created' || $attribute === 'updated' )
+        if( $attribute === 'created' || $attribute === 'updated' || $attribute === 'deleted' )
         {
             return true;
         }

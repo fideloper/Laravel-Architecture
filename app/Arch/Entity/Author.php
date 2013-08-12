@@ -11,6 +11,7 @@ class Author extends AbstractEntity {
         'password',
         'created',
         'updated',
+        'deleted',
     );
 
 }

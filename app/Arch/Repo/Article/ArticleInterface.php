@@ -35,6 +35,6 @@ interface ArticleInterface {
      * @param  String Article  Short Name
      * @return \Arch\Entity\Article     Single article
      */
-    public function byShortName($shortName);
+    public function byShortTitle($shortName);
 
 }

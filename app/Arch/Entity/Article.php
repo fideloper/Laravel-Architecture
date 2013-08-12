@@ -13,6 +13,7 @@ class Article extends AbstractEntity {
         'tags',
         'created',
         'updated',
+        'deleted',
     );
 
 }
